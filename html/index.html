@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btn" value="按钮" />
+		<script>
+			//去掉首尾空格的兼容
+//			var str = '   abc  d   ';
+//			String.prototype.trim = function(){
+//				return this.replace(/^\s+|\s+$/g,'')
+//			}
+//			console.log(str);
+//			console.log(str.trim());
+			
+			//forEach的兼容
+//			var arr = [1,2,3,4,5];
+//			Array.prototype.forEach = function(fn,that){
+//				that = that || this;
+//				for (var i = 0; i < this.length; i++) {
+//					fn.call(that,this[i],i,that);
+//				}
+//			};
+//			arr.forEach(function(elem,i,all){
+////				console.log(elem)//数组每一项
+////				console.log(i)//每一项的下标
+////				console.log(all)//整个数组
+//			})
+			
+			//alert(event);
+			/*
+				chrome/ie 都有event
+				
+				ff是没有event
+				
+				在FF下，如果不加window,那么event会为一个变量，如果不设置这个变量，会报错
+			*/
+//			document.onclick = function(ev){
+//		//		alert(ev)
+//				var e = window.event || ev;
+//				alert(e);
+//			}
+
+//		function addEvent(obj,Event,evFn){
+//			window.fn1 = function(){
+//				evFn.call(obj);
+//			}
+//			if(obj.addEventListener){
+//				obj.addEventListener(Event,evFn,false)
+//			}else{
+//				obj.attachEvent('on'+Event,window.fn1)
+//			}
+//		}
+//		addEvent(document,'click',function(){
+//			alert(this);
+//		});
+
+		//解除绑定
+		function addEvent(obj,Event,evFn){
+			window.fn1 = function(){
+				evFn.call(obj);
+			}
+			if(obj.addEventListener){
+				obj.addEventListener(Event,evFn,false)
+			}else{
+				obj.attachEvent('on'+Event,window.fn1)
+			}
+		};
+		addEvent(document,'click',fn2);
+		function fn2(){
+			alert(1)
+		}
+		var btn1 = document.getElementById("btn");
+		btn1.onclick = function(ev){
+			var e = ev || event;
+			//document.removeEventListener('click',fn2);
+			document.detachEvent('onclick',window.fn1);
+			e.cancelBubble = true;
+		}
+		</script>
+	</body>
+</html>
