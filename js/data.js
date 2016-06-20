@@ -26,5 +26,16 @@ var data = {
 			pid:3,
 			"name":"发如雪"
 		}
+	],
+	common:[
+		{
+			name:'创建'
+		},
+		{
+			name:'刷新'
+		},
+		{
+			name:'粘贴'
+		}
 	]
 }

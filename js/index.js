@@ -41,7 +41,6 @@
 			}
 		}
 	}
-	
 	//新建文件夹
 	tools.addEvent(createFolder,'click',function(){
 		if( this.isCreateStatus ){
@@ -81,7 +80,8 @@
 		var edtor = tools.$(".edtor",li)[0];
 		var names = tools.$(".names",li)[0];
 		// √键的绑定事件
-		tools.addEvent(ok,"click",function(ev){
+		tools.addEvent(ok,"click",fnOk);
+		function fnOk(ev){
 			strong.innerHTML = isRename(hiddenInput.value,names.value);
 			strong.style.display = "block";
 			edtor.style.display = "none";
@@ -100,7 +100,15 @@
 				tools.store("miaov",datas);
 			}
 			ev.stopPropagation();
-		});
+		};
+		//	enter键功能
+		tools.addEvent(names,'keydown',function(ev){
+			var e = ev || event;
+			if(e.keyCode == 13){
+				fnOk(e);
+				
+			}
+		})
 		// X键的绑定事件
 		tools.addEvent(cancel,"click",function (ev){
 			if(!rename.isRename){
@@ -190,7 +198,7 @@
 			renderNav(navArr,startIndex);
 		}
 	})
-	//判断是否重命名
+	//判断是否重名
 	function isRename(pid,name){
 		var num1 = 0;
 		tools.each(datas.files,function(item,index){
@@ -319,30 +327,7 @@
 			reName_names.select();
 			names = reName_names;
 		}
-		//	enter键功能
-		tools.addEvent(document,'keydown',function(li){
-			var e = ev || event;
-			if(e.keyCode == 13){
-				strong.innerHTML = isRename(hiddenInput.value,names.value);
-				strong.style.display = "block";
-				edtor.style.display = "none";
-				span1.innerHTML = allLi.length
-				createFolder.isCreateStatus = false;
-				if(rename.isRename){
-					var currentItem = getIdItem(li.id);
-					currentItem.name = names.value;
-					rename.isRename = false;
-				}else{
-					datas.files.push({
-						id:li.id,
-						pid:hiddenInput.value,
-						name:strong.innerHTML
-					})
-					tools.store("miaov",datas);
-				}
-//				ev.stopPropagation();
-			}
-		})
+		
 	});
 
 	//复制按钮弹出遮罩层
@@ -352,6 +337,7 @@
 	var dialog_close = tools.$('.dialog_close')[0]//关闭遮罩层
 	var movement = tools.$('.movement')[0]//按钮移动 弹出遮罩层
 	var select_text = tools.$('.select_text')[0];
+	var foot_creat = tools.$('.foot_creat')[0];//遮罩层的新建文件夹按钮
 	tools.addEvent(movement,'click',function(){
 		cover.style.display = 'block';
 		select_text.innerHTML = '移动到'
@@ -367,6 +353,35 @@
 	//点取消时把遮罩层去掉
 	tools.addEvent(foot_cancel,'click',function(){
 		cover.style.display = 'none';
+	})
+	
+	//遮罩层的新建文件夹
+	tools.addEvent(foot_creat,'click',function(){
+		if( this.isCreateStatus ){
+			names.select();
+			return;
+		};
+		seletedNum = 0;	
+		span.innerHTML = '0';
+		allSelected.checked = false;
+		var random = new Date().getTime();//根据时间戳来创建文件夹
+		var newLi = createLi(
+			{
+				id:random
+			}
+		);
+		filesSet.appendChild(newLi);
+		names = tools.$(".names",newLi)[0];//修改名字的输入框
+		var strong = tools.$("strong",newLi)[0];
+		var edtor = tools.$(".edtor",newLi)[0];
+		strong.style.display = "none";
+		edtor.style.display = "block";//新建的时候让输入框显示
+		names.select();//正在创建的状态
+		this.isCreateStatus = true;
+		handleLi(newLi);
+		tools.each(allLi,function(item){//取消掉所有li中的样式
+			cancelStyle(item);
+		})
 	})
 	//获取选中的li
 	function whoSelect(){
@@ -395,6 +410,7 @@
 		extend(this.settings,opt)
 		this.obj.onmousedown = function(ev){
 			var e = ev || event;
+			
 			_this.down(e);
 			_this.settings.toDown();
 			document.onmousemove = function(ev){
@@ -404,7 +420,6 @@
 			document.onmouseup = function(){
 				_this.up();
 				_this.settings.toUp();
-				
 			}
 			return false;
 		}
@@ -435,7 +450,6 @@
 	//获取所有的li
 	var allLi = tools.$("li",tools.$(".filesSet")[0]);
 	tools.addEvent(filebox,'mousedown',function(ev){
-		
 		var e = ev || event;
 		var disX = e.clientX;
 		var disY = e.clientY;
@@ -493,20 +507,18 @@
 			}
 		}
 		ev.preventDefault();
+		return false;
 	});	
-	
+	//右键菜单事件
+	tools.addEvent(filesSet,'contextmenu',function(ev){
+		var e = ev || event;
+		showContextmenu(e,datas.common)
+		ev.preventDefault();
+		return false;
+	});
+	tools.addEvent(document,'click',function(){
+		hideContextmenu();
+		return false;
+	});
 })()
-/////数组去重
-var arr3 = [1,2,3,4,5,6,4,3,3]
-//console.log(fnQc(arr3))
-function fnQc(arr){
-	var arr2 = [];
-	var json = {};
-	for (var i = 0; i < arr.length; i++) {
-		if(!json[arr[i]]){
-			arr2.push(arr[i]);
-			json[arr[i]]=1;
-		}
-	}
-	return arr2;
-}
+
