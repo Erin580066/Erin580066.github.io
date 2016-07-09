@@ -1,11 +1,36 @@
-.clearfix:after{
-	content:'';
-	display:block;
-	clear:both;
+.fl{
+	float: left;
 }
-.fl{float:left;}
-.fr{float:right;}
-.sprites{
-	background-image:url(../img/1.png);
+.fr{
+	float: right;
+}
+.clearFix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.spirit{
+	background-image: url(../img/spirit.png);
 	background-repeat: no-repeat;
 }
+body{
+	font-family: "微软雅黑";
+}
+
+/*
+ * 没有文件时的雪碧图
+ */
+.empty_bg{
+	background-image: url(../img/emptyfile_button.png);
+	background-repeat: no-repeat;
+}
+
+/*
+ * 音乐播放器的雪碧图
+ */
+.music_bg{
+	background-image: url(../img/musicPlayer_bg.png);
+	background-repeat: no-repeat;
+}
+
+

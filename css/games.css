@@ -1,0 +1,58 @@
+/*
+ * 游戏区
+ */
+.gamesBox{
+	right: 0;
+	top: 49px;
+	position: fixed;
+	z-index: 100;
+	background-color: red;
+}
+.gamesBox h2{
+	text-align: center;
+}
+.wrap{
+	width: 1000px;
+	height: 600px;
+	border: 1px solid #000000;
+	margin: 0 auto;
+}
+
+#left{
+	width: 200px;
+	height: 100%;
+	background-color: #14EAF4;
+	float: left;
+}
+#left p{
+	width: 100%;
+}
+#right{
+	width: 800px;
+	height: 100%;
+	background-color: #BCE3FF;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+#right span{
+	position: absolute;
+	top: 0;
+	height: 0;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

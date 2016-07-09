@@ -1,266 +1,339 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>百度云</title>
-		<link rel="stylesheet" href="css/reset.css" />
-		<link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" href="css/public.css" />
+		<title></title>
+		<link href="favicon.ico" rel="icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/global.css"/>
+		<link rel="stylesheet" type="text/css" href="css/fixIE.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/games.css"/>
+		
 	</head>
 	<body>
-		<!--头部导航部分-->
-		<header class="clearfix">
+		<header class="head">
 			<div class="head_left fl">
-				<h2 class="fl">百度云
-					<a href="" class="sprites fl"></a>
-				</h2>
-				<ul class="fl">
-					<li class="fl page1">主页</li>
-					<li class="fl page2">网盘<span class="icron sprites"></span></li>
-					<li class="fl">分享</li>
-					<li class="fl">应用</li>
-				</ul>
-			</div>
-			<div class="head_right fr">
-				<ul class="clearfix">
-					<li class="fl R-1">
-						<a href="" class="alone">超级会员限时六折，限时三天</a>
+				<h1 class="logo fl">
+					<a href="" class="logobg spirit">百度云</a>
+				</h1>
+				<ul class="nav fl">
+					<li class="homepage fl">
+						<a href="">主页</a>
 					</li>
-					<li class="fl search">
-						<form>
-							<input type="text" class="fl" id="btn" placeholder="搜索你的文件"/>
-							<span class="fl">搜索</span>
-						</form>
-					</li>
-					<span class="fl line"></span>
-					<li class="fl">
-						<span class="fl No1 sprites"></span>
-						<a href="" class="fl specil">150****5888</a>
-						<span class="fl icron sprites"></span>
-					</li>
-					<span class="fl line"></span>
-					<li class="fl">
-						<a href="" class="specil center">会员中心</a>
-					</li>
-					<span class="fl line"></span>
-					<li class="fl">
-						<a href="" class="specil alone">客户端下载</a>
-					</li>
-					<span class="fl line"></span>
-					<li class="fl">
-						<a href="" class="specil alone">通知</a>
-					</li>
-					<span class="fl line"></span>
-					<li class="fl">
-						<a href="" class="fl specil">更多</a>
-						<span class="fl icron sprites"></span>
-					</li>
-				</ul>
-			</div>
-		</header>
-		<div class="content clearfix">
-			<!--内容左边菜单项-->
-			<div class="fl cont_left">
-				<ul id="list">
-					<li class="show">
-						<a href="" class="clearfix">
-							<span class="fl pic sprites"></span>
-							<span class="fl">全部文件</span>
-						</a>
-					</li>
-					<li class="">
-						<a href="" class="clearfix">
-							<span class="fl pic pic1 sprites"></span>
-							<span class="fl">图片</span>
-						</a>
-					</li>
-					<li class="">
-						<a href="" class="clearfix">
-							<span class="fl pic word sprites"></span>
-							<span class="fl">文档</span>
-						</a>
-					</li>
-					<li class="">
-						<a href="" class="clearfix">
-							<span class="fl pic video sprites"></span>
-							<span class="fl">视频</span>
-						</a>
-					</li>
-					<li class="">
-						<a href="http://pan.baidu.com/disk/home#category/type=7" class="clearfix">
-							<span class="fl pic bt sprites"></span>
-							<span class="fl">种子</span>
-						</a>
-					</li>
-					<li class="">
-						<a href="" class="clearfix">
-							<span class="fl pic music sprites"></span>
-							<span class="fl">音乐</span>
-						</a>
-					</li>
-					<li class="">
-						<a href="" class="clearfix">
-							<span class="fl pic other sprites"></span>
-							<span class="fl">其他</span>
-						</a>
-					</li>
-					<li class="myown" id="abc">
-						<a href="http://pan.baidu.com/share/manage" class="clearfix">
-							<span class="fl share sprites"></span>
-							<span class="fl">我的分享</span>
-						</a>
-					</li>
-					<li class="myown">
-						<a href="" class="clearfix">
-							<span class="fl share share1 sprites"></span>
-							<span class="fl">回收站</span>
-						</a>
-					</li>
-					<li class="myown1 clearfix">
-						<ul>
-							<li class="fl">
-								<span class="sprites icron2 bgt1"></span>
-								<span class="info">云管家</span>
+					<li class="disk fl">
+						<a href=""class="active">网盘</a>
+						<em class="spirit diskbg"></em>
+						<ul class="subMenu clearFix">
+							<li class="yunpan">
+								<a href="">
+									<em class="spirit"></em>
+									<span>网盘</span>
+								</a>
 							</li>
-							<li class="fl">
-								<span class="sprites icron2 bgt2"></span>
-								<span class="info">android</span>
+							<li class="contacts">
+								<a href="">
+									<em class="spirit"></em>
+									<span>通讯录</span>
+								</a>
 							</li>
-							<li class="fl">
-								<span class="sprites icron2 bgt3"></span>
-								<span class="info">iphone</span>
+							<li class="call_log">
+								<a href="">
+									<em class="spirit"></em>
+									<span>通话记录</span>
+								</a>
 							</li>
-							<li class="fl">
-								<span class="sprites icron2 bgt4"></span>
-								<span class="info">更多</span>
+							<li class="msg">
+								<a href="">
+									<em class="spirit"></em>
+									<span>短信</span>
+								</a>
+							</li>
+							<li class="article">
+								<a href="">
+									<em class="spirit"></em>
+									<span>文章</span>
+								</a>
+							</li>
+							<li class="notepad">
+								<a href="">
+									<em class="spirit"></em>
+									<span>记事本</span>
+								</a>
+							</li>
+							<li class="find_byphone">
+								<a href="">
+									<em class="spirit"></em>
+									<span>手机找回</span>
+								</a>
+							</li>
+							<li class="cloud_live">
+								<a href="">
+									<em class="spirit"></em>
+									<span>云直播</span>
+								</a>
 							</li>
 						</ul>
 					</li>
-					<li class="myown2">
-						<div class="progress">
-							<p></p>
-						</div>
-						<div>
-							<span class="fl storage">44.53G/2053G</span>
-							<span class="fl storage1">扩容</span>
-						</div>
+					<li class="share fl">
+						<a href="">分享</a>
+					</li>
+					<li class="application fl">
+						<a href="">应用</a>
 					</li>
 				</ul>
 			</div>
-			<!--内容右边菜单项-->
-			<div class=" cont_right" id="cont_right">
-				<div class="R_top clearfix">
-					<a href="#" class="fl upload">
-						<em class="sprites fl"></em>
-						<span class="fl">上传</span>
-						<span class="fl span1 sprites"></span>
+			<ul class="head_right fr">
+				<li class="ad fl">
+					<a href="">百度云超级会员限时折扣</a>
+				</li>
+				<li class="search fl">
+					<form class="search_form" action="" method="post">
+						<input class="search_text" type="text" id="" value="" placeholder="搜索你的文件"/>
+						<input class="searchbtn" type="button" value="搜索"/>
+					</form>
+				</li>
+				<li class="username fl">
+					<a href="">
+						<span class="line"></span>
+						<em class="vipbg spirit"></em>
+						<span href="">用户名</span>
+						<em class="morebg spirit"></em>
 					</a>
-					<a href="#" class="fl create">
-						<em class="sprites fl"></em>
-						<span class="fl createfile">新建文件夹</span>
-					</a>
-				</div>
-				<!--全部文件加载项-->
-				<ul class="allfiles clearfix">
-					<li class="fl files_nav">
-						<span>全部文件</span>
-						<!-- <a href="javascript:;">返回上一级</a>|
-						<span>全部文件</span>
-						
-						<a href="javascript:;">返回上一级</a>|
-						<a href="javascript:;">全部文件</a>>>>
-						<span>miaov</span> -->
-					</li>
-					<li class="fr loadNum">全部加载，共<span>3</span>个</li>
-				</ul>
-				<!--全选按钮功能菜单项-->
-				<section class="cheeckbox clearfix">
-					<input type="checkbox" class="fl allSelected" />
-					<div class="fl otherinfo">
-						<p class="fl selectNum">已选中<span>0</span>个文件夹</p>
-						<a class="fl info_a delectItem" href="javascript:;">删除</a>
-						<a class="fl info_a rename" href="javascript:;">重命名</a>
-						<a class="fl info_a copy" href="javascript:;">复制</a>
-						<a class="fl info_a movement" href="javascript:;">移动</a>
+					<div class="user_services">
+						<em class="spirit"></em>
+						<a href="">个人资料</a>
+						<a href="">购买容量</a>
+						<a href="">云冲印</a>
+						<span class="separate_line"></span>
+						<a href="">退出</a>
 					</div>
+				</li>
+				<li class="vipcenter fl">
+					<span class="line"></span>
+					<a href="" class="vip">会员中心</a>
+				</li>
+				<li class="clientdownload fl">
+					<span class="line"></span>
+					<a href="">客户端下载</a>
+				</li>
+				<li class="inform fl">
+					<span class="line"></span>
+					<a href="">通知</a>
+				</li>
+				<li class="more fl">
+					<span class="line"></span>
+					<a href="">
+						<span>更多</span>
+						<em class="morebg spirit"></em>	
+					</a>
+					<div class="more_services">
+						<em class="spirit"></em>
+						<a href="">开启https模式</a>
+						<span class="separate_line"></span>
+						<a href="">移动开放平台</a>
+						<span class="separate_line"></span>
+						<a href="">收藏工具</a>
+						<a href="">版本更新</a>
+						<a href="">帮助中心</a>
+						<a href="">问题反馈</a>
+						<a href="">服务协议</a>
+						<a href="">权利声明</a>
+					</div>
+				</li>
+			</ul>
+		</header>
+		<section class="content clearFix">
+			<div class="content_left fl">
+				<audio id="au"></audio>
+				<ul class="flie_type">
+					<li class="allfiles hover" au="a">
+						<a href="#">
+							<em class="file_bg spirit"></em>
+							<span>全部文件</span>
+						</a>
+					</li>
+					<li class="picture" au="b">
+						<a href="#" class="">
+							<em class="file_bg spirit"></em>
+							<span>图片</span>
+						</a>
+					</li>
+					<li class="doc" au="c">
+						<a href="#">
+							<em class="file_bg spirit"></em>
+							<span>文档</span>
+						</a>
+					</li>
+					<li class="video" au="d">
+						<a href="#">
+							<em class="file_bg spirit"></em>
+							<span>视频</span>
+						</a>
+					</li>
+					<!--<li class="bt">
+						<a href="#">
+							<em class="file_bg spirit"></em>
+							<span>种子</span>
+						</a>
+					</li>-->
+					<li class="music" au="e">
+						<a href="#">
+							<em class="file_bg spirit"></em>
+							<span>音乐</span>
+						</a>
+					</li>
+					<!--<li class="others">
+						<a href="#">
+							<em class="file_bg spirit"></em>
+							<span>其他</span>
+						</a>
+					</li>-->
+					<!--<li class="games">-->
+					<!--	<a href="#">-->
+					<!--		<em class="file_bg spirit"></em>-->
+					<!--		<span>游戏</span>-->
+					<!--	</a>-->
+					<!--</li>-->
+				</ul>
+				
+			</div>
+			<div class="content_right fl">
+				<ul class="content_btns">
+					<li class="upload fl">
+						<em class="spirit uploadbg"></em>
+						<span class="upload_txt">上传</span>
+						<em class="spirit morebg"></em>
+						<form action="" method="post" class="uploadform">
+							<input type="file" class="uploadbtn" id="" value="上传文件" />
+						</form>
+						<!--<div class="uploadbtns">
+							<form action="" method="post">
+								<input type="file" name="" id="" value="上传文件" />111
+							</form>
+							<form action="" method="post">
+								<input type="file" name="" id="" value="上传文件夹" />111
+							</form>
+						</div>-->
+					</li>
+					<li class="newfile fl">
+						<em class="spirit"></em>
+						<span class="">新建文件夹</span>
+					</li>
+					<li class="showtype spirit fr">
+						<a class="spirit list_type" href="javascript:void(0)" title="列表"></a>
+						<a class="spirit icon_type" href="javascript:void(0)" title="图标"></a>
+					</li>
+				</ul>
+				<section>
+					<div class="filetype clearFix">
+						<div class="fileUrl fl"><span>全部文件</span></div>
+						<div class="loadfiles fr">已全部加载，共<span class="file_num">0</span>个</div>
+					</div>
+					<div class="nofile_bg" style="display: none;">
+						<div class="nofile_bg1 empty_bg"></div>
+						<div class="nofile_bg2 empty_bg"></div>
+						<div class="nofile_btns">
+							<a href="#" class="phone_download empty_bg"></a>
+							<a href="#" class="scan_code empty_bg"></a>
+							<a href="#" class="ipad_download empty_bg"></a>
+							<a href="#" class="pc_download empty_bg"></a>
+						</div>
+					</div>
+					<div class="handle_btns" style="display: block;">
+						<em class="selAll spirit"></em>
+						<ul class="btns">
+							<li class="sel_txt">已选中<span id="selectedNum">0</span>个文件/文件夹</li>
+							<li class="delete">
+								<em class="spirit"></em>
+								<span>删除</span>
+							</li>
+							<li class="rename">重命名</li>
+							<li class="copy">复制到</li>
+							<li class="remove">移动到</li>
+						</ul>
+					</div>
+					<section id="fileBox" style="display: block;">
+						<ul id="contextmenu">
+							
+						</ul>
+						<ul  class="filelist clearFix" id="filelist">
+							<li>
+								<div class="icon">
+									<em class="spirit file_bg"></em>
+									<em class="spirit file_select"></em>
+								</div>
+								<a class="file_name" href="#" style="display:block;">123</a>
+								<div class="clearFix editor"  style="display:none;">
+									<input type="text" value="123" class="names"  />
+									<em class="spirit ok"></em>
+									<em class="spirit cancel"></em>
+								</div>
+							</li>
+							<li>
+								<div class="icon">
+									<em class="spirit file_bg"></em>
+									<em class="spirit file_select"></em>
+								</div>
+								<a class="file_name" href="#" style="display:block;">123</a>
+								<div class="clearFix editor"  style="display:none;">
+									<input type="text" value="123" class="names"  />
+									<em class="spirit ok"></em>
+									<em class="spirit cancel"></em>
+								</div>
+							</li>
+							<li>
+								<div class="icon">
+									<em class="spirit file_bg"></em>
+									<em class="spirit file_select"></em>
+								</div>
+								<a class="file_name" href="#" style="display:block;">123</a>
+								<div class="clearFix editor"  style="display:none;">
+									<input type="text" value="123" class="names"  />
+									<em class="spirit ok"></em>
+									<em class="spirit cancel"></em>
+								</div>
+							</li>
+						</ul>
+					</section>
 				</section>
-				<!--文件夹选项-->
-				<div class="filebox">
-					<ul id="contextmenu"></ul>
-					<ul class="clearfix filesSet">
-						<!--<li>
-							<div class="icon">
-								<input type="checkbox"  class="checkInput" />
-							</div>
-							<strong style="display:block;">123</strong>
-							<div class="clearFix edtor"  style="display:none;">
-								<input type="text" value="123" class="names"  />
-								<input type="button" value="√" />
-								<input type="button" value="×" />
-							</div>
-						</li>
-						<li>
-							<div class="icon">
-								<input type="checkbox"  class="checkInput" />
-							</div>
-							<strong style="display:block;">456</strong>
-							<div class="clearFix edtor"  style="display:none;">
-								<input type="text" value="456" class="names"  />
-								<input type="button" value="√" />
-								<input type="button" value="×" />
-							</div>
-						</li>-->
-					</ul>
+			</div>
+			<input type="hidden" name="" class="pidRecoder" value="0" />
+		</section>
+		<section id="musicBox">
+			<audio id="player" loop="loop">
+				<source src="Dreamtale - Intro： The Dawn.mp3"></source>
+			</audio>
+			
+			<div class="playCtrl">
+				<em class="music_bg prevSong"></em>
+				<em class="music_bg onOff"></em>
+				<em class="music_bg nextSong"></em>
+			</div>
+			<div class="playInfo">
+				<div class="songInfo">
+					<span class="songName">爱在西元前</span> - <span class="singer">周杰伦</span>
 				</div>
-				<!--弹出框-->
-				<div class="cover">
-					<div class="option_box" id="option_box">
-						<div class="option_title clearfix" id="option_title">
-							<span class="fl select_text">复制到</span>
-							<span class="fl dialog_close">×</span>
-						</div>
-						<div class="option_main clearfix">
-							<div class="file_tree">
-								<ul class="treeview ">
-									<li class="alltreefile clearfix">
-										<span class="fl sprites icron3"></span>
-										<span class="fl sprites icron4"></span>
-										<div>全部文件</div>
-										<ul class="branchfile">
-											<li class="clearfix">
-												<span class="fl sprites icron5"></span>
-												<span class="fl sprites icron6"></span>
-												<div>我的文档</div>
-											</li>
-											<li class="clearfix">
-												<span class="fl sprites icron5"></span>
-												<span class="fl sprites icron6"></span>
-												<div>我的音乐</div>
-											</li>
-											<li class="clearfix">
-												<span class="fl sprites icron5"></span>
-												<span class="fl sprites icron6"></span>
-												<div>我的作品</div>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-							<div class="treeview_footer fl">
-								<span class="fl foot_creat">新建文件夹</span>
-								<span class="fl foot_sure">确定</span>
-								<span class="fl foot_cancel">取消</span>
-							</div>
-						</div>
-					</div>
+				<div class="progressAll">
+					<div class="progressNow"></div>
+					<div class="progressBlock music_bg"></div>
 				</div>
 			</div>
-		</div>
-		<input type="hidden" class="hiddenInput" value="0" />
-		<script src="js/jquery-2.2.2.min.js"></script>
+			<div class="playTime">
+				<span class="timeNow">00:00</span> / <span class="timeAll">00:00</span>
+			</div>
+			<div class="playVol">
+				<em class="music_bg mute"></em>
+				<div class="volControl">
+					<div class="volNow"></div>
+					<div class="volBlock music_bg"></div>
+				</div>
+			</div>
+		</section>
+		<script src="js/move.js"></script>
 		<script src="js/data.js"></script>
-		<script src="js/tool.js"></script>
-		<script src="js/tool1.js"></script>
-		<script src="js/index.js"></script>
+		<script src="js/tools.js"></script>
+		<script src="js/index.js" ></script>
 	</body>
 </html>
